@@ -3,13 +3,14 @@ import 'firebase/firestore'
 import 'firebase/auth'
 
 // Initialize Firebase
+console.log(process.env.PROJECTID);
 var config = {
-  apiKey: "AIzaSyAxmfDyMCWGe-JRjQaCW7hMooww2jKNk44",
-  authDomain: "rock-international-ministries.firebaseapp.com",
-  databaseURL: "https://rock-international-ministries.firebaseio.com",
-  projectId: "rock-international-ministries",
-  storageBucket: "rock-international-ministries.appspot.com",
-  messagingSenderId: "204835454682"
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASEURL,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID
 };
 
 firebase.initializeApp(config);
